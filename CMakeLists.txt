@@ -98,7 +98,7 @@ ENDIF()
 IF (WITH_GPU)
 
     MESSAGE(STATUS "Building shared library with GPU support")
-
+    MESSAGE(STATUS "NVCC FLAGS: ${CUDA_NVCC_FLAGS}")
     CUDA_ADD_LIBRARY(warprnnt SHARED src/rnnt_entrypoint.cu)
     IF (!Torch_FOUND)
         TARGET_LINK_LIBRARIES(warprnnt ${CUDA_curand_LIBRARY})
