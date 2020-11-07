@@ -66,9 +66,7 @@ ENDIF()
 IF (CUDA_VERSION GREATER 9.9)
     set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -gencode arch=compute_75,code=sm_75")
 ENDIF()
-IF (CUDA_VERSION GREATER 10.9)
-    set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -gencode arch=compute_86,code=sm_86")
-ENDIF()
+
 
 
 if (NOT APPLE)
